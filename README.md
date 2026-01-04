@@ -22,7 +22,7 @@ Therefore, homophony (same spelling, different meanings) mainly affects extremel
 *Jenny shì Zhōngwén lǎoshī. Wǒ gēn tā xuéxí de shíhou, tā gěi wǒ de nà běn shū duì wǒ jí zhòngyào.*  
 (Jenny is a Chinese teacher. When I was studying with her, the book she gave me was extremely important to me.)
 
-However, it is crucial that Pinyin spelling be accurate and not distorted by tone sandhi or spelling mistakes.
+However, it is crucial that Pinyin spelling be accurate (following the rules of **GB/T 16159-2012**, the national standard of the People's Republic of China for Chinese phonetic alphabet orthography) and not distorted by tone sandhi or spelling mistakes.
 
 **Example:**  
 *Yàoshi bìngqíng jiǎndān yì zhì jiù hǎo le.*  
