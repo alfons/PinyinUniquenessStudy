@@ -25,8 +25,8 @@ Therefore, homophony (same spelling, different meanings) mainly affects extremel
 However, it is crucial that Pinyin spelling be accurate (following the rules of **GB/T 16159-2012**, the national standard of the People's Republic of China for Chinese phonetic alphabet orthography) and not distorted by tone sandhi or spelling mistakes.
 
 **Example:**  
-*Yàoshi bìngqíng jiǎndān yì zhì jiù hǎo le.*  
-(If the illness were simple to treat, that would be good.)  
+*Yàoshi bìngqíng yì zhì jiù hǎo le.*  
+(If the illness were easy to treat, that would be good.)  
 
 Here, *yì* means “easy” and *zhì* means “to treat.” If these were written together as a single word, or if the tone on *yì* were changed, the meaning would change or become difficult to interpret.
 
