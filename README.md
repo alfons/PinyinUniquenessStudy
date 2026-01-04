@@ -1,57 +1,39 @@
-The pattern is crystal clear: single characters are highly homophonous, while everyday two-character words written in pinyin are almost as unique as chinese characters.
+**Bottom line:** Single syllable Pinyin words are highly homophonous, while compound words written in Pinyin are almost as unique as the Chinese characters themselves.
 
+![Pinyin Uniqueness Chart](https://github.com/user-attachments/assets/c87455aa-b07f-4a57-9616-8d9305b32cd6)
 
-Results
+## Key Insights
 
-Total single-character words analyzed: 4,681
+- Among the **3,000 most frequent single characters**, **22.0%** have a unique spelling in Pinyin.  
 
-Selection: The 5,000 most frequent single-character words
-(only those present in both frequency list and dictionary)
+- Among **all 4,681 single character words in the dictionary**, only **12.9%** have unique Pinyin spelling.
 
-Of these, how many have a unique numeric pinyin reading
-(exact match including capitalization, spaces and hyphens removed):
-602 (12.9%)
+- In contrast, the **5,000 most frequent two-character words** achieve an astonishing **97.8%** uniqueness in Pinyin spelling.
 
-Dictionary entries processed: 113,525 | Frequency list: 90,706 total entries
+- Even when expanding to **all ~29,000 two-character words** in the dictionary, **90.1%** still have unique Pinyin spelling.
 
-Settings: WORD_LENGTH = 1 | CASE_SENSITIVE_MATCH = true | FREQUENCY_CUTOFF = 5000
+## Discussion
 
+This means that for words with two or more syllables, Pinyin is nearly as precise as writing with Chinese characters themselves. The small number of ambiguous cases are usually resolved effortlessly from context.
 
-Results
+Therefore, homophony (same spelling, different meanings) mainly affects extremely versatile monosyllabic words such as *shì*, *jí*, or *yì*; but even these are, in practice, easy to interpret from context.
 
-Total 2-character words analyzed: 5,000
+**Example:**  
+*Jenny shì Zhōngwén lǎoshī. Wǒ gēn tā xuéxí de shíhou, tā gěi wǒ de nà běn shū duì wǒ jí zhòngyào.*  
+(Jenny is a Chinese teacher. When I was studying with her, the book she gave me was extremely important to me.)
 
-Selection: The 5,000 most frequent 2-character words
-(only those present in both frequency list and dictionary)
+However, it is crucial that Pinyin spelling be accurate and not distorted by tone sandhi or spelling mistakes.
 
-Of these, how many have a unique numeric pinyin reading
-(exact match including capitalization, spaces and hyphens removed):
-4,892 (97.8%)
+**Example:**  
+*Yàoshi bìngqíng jiǎndān yì zhì jiù hǎo le.*  
+(If the illness were simple to treat, that would be good.)  
 
-Dictionary entries processed: 113,525 | Frequency list: 90,706 total entries
+Here, *yì* means “easy” and *zhì* means “to treat.” If these were written together as a single word, or if the tone on *yì* were changed, the meaning would change or become difficult to interpret.
 
-Settings: WORD_LENGTH = 2 | CASE_SENSITIVE_MATCH = true | FREQUENCY_CUTOFF = 5000
+— Alfons Grabher
 
-Results
+## Acknowledgments
 
-Total single-character words analyzed: 4,681
+Dictionary data from CC-CEDICT (https://cc-cedict.org), a community-maintained Chinese–English dictionary licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Adapted for Pīnyīn and general audiences. Version date: 2025-Oct-19.
 
-Of these, how many have a unique numeric pinyin reading
-(exact match including capitalization, spaces and hyphens removed):
-602 (12.9%)
-
-Dictionary entries processed: 113,525 | Frequency list: 90,706 total entries
-
-Settings: WORD_LENGTH = 1 | CASE_SENSITIVE_MATCH = true | FREQUENCY_CUTOFF = false
-
-Results
-
-Total 2-character words analyzed: 29,317
-
-Of these, how many have a unique numeric pinyin reading
-(exact match including capitalization, spaces and hyphens removed):
-26,423 (90.1%)
-
-Dictionary entries processed: 113,525 | Frequency list: 90,706 total entries
-
-Settings: WORD_LENGTH = 2 | CASE_SENSITIVE_MATCH = true | FREQUENCY_CUTOFF = false
+Simplified Chinese character word frequencies, from SUBTLEX-CH-WF, W/million, based on a corpus of film and television subtitles (33.5 million words). journals.plos.org/plosone/article?id=10.1371/journal.pone.0010729 Released under CC-BY 4.0, creativecommons.org/licenses/by/4.0/
