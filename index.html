@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Dictionary Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chinese Dictionary Statistics</h1>
+        <div id="stats" class="stats">
+            <p>Loading data...</p>
+        </div>
+
+        <div id="char-list-container" style="display:none; margin-top:40px;">
+            <h2>Unique Single-Character Words (Simplified, Top ${FREQUENCY_CUTOFF})</h2>
+            <input type="text" id="search" placeholder="Search character or pinyin..." style="width:100%; padding:10px; margin-bottom:20px; font-size:16px;">
+
+            <table id="char-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Character</th>
+                        <th>Pinyin</th>
+                        <th>Unique Pinyin?</th>
+                    </tr>
+                </thead>
+                <tbody id="char-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="dictionary.js"></script>
+    <script src="frequency_list.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
