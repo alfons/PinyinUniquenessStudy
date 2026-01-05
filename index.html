@@ -1,38 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinese Dictionary Stats</title>
+    <title>Empirical Analysis of Pinyin Uniqueness in Mandarin Chinese</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Chinese Dictionary Statistics</h1>
-        <div id="stats" class="stats">
-            <p>Loading data...</p>
-        </div>
+        <header>
+            <h1>Empirical Analysis of Pinyin Uniqueness in Mandarin Chinese Lexical Items</h1>
+            <p class="subtitle">Quantitative Evidence Supporting the Near-Equivalence of Standardized Pinyin and Hanzi
+                for Polysyllabic Vocabulary</p>
+            <p class="author">Alfons Grabher</p>
+        </header>
 
-        <div id="char-list-container" style="display:none; margin-top:40px;">
-            <h2>Unique Single-Character Words (Simplified, Top ${FREQUENCY_CUTOFF})</h2>
-            <input type="text" id="search" placeholder="Search character or pinyin..." style="width:100%; padding:10px; margin-bottom:20px; font-size:16px;">
+        <section class="abstract">
+            <p><strong>Bottom line:</strong> Single-syllable Pinyin spellings are highly homophonous, while compound
+                words written in standardized Pinyin (spaces and hyphens removed) are almost as unique as the Chinese
+                characters themselves.</p>
+
+            <figure class="chart">
+                <table class="data-summary-table">
+                    <thead>
+                        <tr>
+                            <th>Word Length</th>
+                            <th>Cutoff Setting</th>
+                            <th>Words Analyzed</th>
+                            <th>Unique Pinyin Readings</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 (single-character)</td>
+                            <td>Top 3,000 most frequent</td>
+                            <td>3,000</td>
+                            <td>661</td>
+                            <td>22.0%</td>
+                        </tr>
+                        <tr>
+                            <td>1 (single-character)</td>
+                            <td>All (no cutoff)</td>
+                            <td>4,681</td>
+                            <td>602</td>
+                            <td>12.9%</td>
+                        </tr>
+                        <tr>
+                            <td>2 (two-character)</td>
+                            <td>Top 3,000 most frequent</td>
+                            <td>3,000</td>
+                            <td>2,955</td>
+                            <td>98.5%</td>
+                        </tr>
+                        <tr>
+                            <td>2 (two-character)</td>
+                            <td>All (no cutoff)</td>
+                            <td>29,317</td>
+                            <td>26,423</td>
+                            <td>90.1%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <figcaption>Figure 1. Proportion of unique Pinyin readings by word length and frequency cutoff<br>
+                    <small>(spaces and hyphens removed during comparison; case-sensitive)</small>
+                </figcaption>
+            </figure>
+
+            <h2>Key Insights</h2>
+            <ul>
+                <li>Among the <strong>3,000 most frequent single characters</strong>, <strong>22.0%</strong> have a
+                    unique spelling in Pinyin.</li>
+                <li>Among <strong>all 4,681 single-character words</strong> in the dictionary, only
+                    <strong>12.9%</strong> have unique Pinyin spelling.
+                </li>
+                <li>In contrast, the <strong>3,000 most frequent two-character words</strong> achieve an astonishing
+                    <strong>98.5%</strong> uniqueness in Pinyin spelling.
+                </li>
+                <li>Even when expanding to <strong>all ~29,000 two-character words</strong> in the dictionary,
+                    <strong>90.1%</strong> still have unique Pinyin spelling.
+                </li>
+            </ul>
+
+            <h2>Discussion</h2>
+            <p>This means that for words with two or more syllables, Pinyin is nearly as precise as writing with Chinese
+                characters themselves. The small number of ambiguous cases are usually resolved effortlessly from
+                context.</p>
+            <p>Therefore, homophony mainly affects extremely versatile monosyllabic words such as <em>shì</em>,
+                <em>jí</em>, or <em>yì</em>; but even these are, in practice, easy to interpret from context.
+            </p>
+
+            <p><strong>Example:</strong><br>
+                <em>Jenny shì Zhōngwén lǎoshī. Wǒ gēn tā xuéxí de shíhou, tā gěi wǒ de nà běn shū duì wǒ jí
+                    zhòngyào.</em><br>
+                (Jenny is a Chinese teacher. When I was studying with her, the book she gave me was extremely important
+                to me.) No Chinese speaker would have any difficulty interpreting shì in “Jenny shì Zhōngwén lǎoshī” as
+                the verb “to be,” rather than confusing it with other meanings such as “matter”, “room”, “city”, or “to
+                try”.
+            </p>
+
+            <p>However, it is crucial that Pinyin spelling be accurate (following the rules of <strong>GB/T
+                    16159-2012</strong>, the national standard of the People's Republic of China for Chinese phonetic
+                alphabet orthography) and not distorted by tone sandhi or spelling mistakes.</p>
+
+            <p><strong>Example:</strong><br>
+                <em>Yàoshi bìngqíng jiǎndān yì zhì jiù hǎo le.</em><br>
+                (If the illness were simple to treat, that would be good.)<br>
+                Here, <em>yì</em> means “easy” and <em>zhì</em> means “to treat.”
+            </p>
+
+            <p class="signature">— Alfons Grabher</p>
+        </section>
+
+        <section id="controls">
+            <h2>Interactive Analysis Parameters</h2>
+            <p>Use the form below to explore the data interactively. The tool computes uniqueness after removing all
+                spaces and hyphens from the dictionary Pinyin readings.</p>
+            <form id="config-form">
+                <div class="form-group">
+                    <label for="word-length">Word Length (characters):</label>
+                    <select id="word-length" name="word-length">
+                        <option value="1">1 (single character)</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cutoff">Frequency Cutoff:</label>
+                    <select id="cutoff" name="cutoff">
+                        <option value="false">All available entries</option>
+                        <option value="400">Top 400</option>
+                        <option value="800">Top 800</option>
+                        <option value="1000">Top 1,000</option>
+                        <option value="3000" selected>Top 3,000</option>
+                        <option value="5000">Top 5,000</option>
+                        <option value="10000">Top 10,000</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox">
+                    <label>
+                        <input type="checkbox" id="case-sensitive" name="case-sensitive" checked>
+                        Case-sensitive pinyin matching
+                        <span class="note">(e.g., "A1" ≠ "a1")</span>
+                    </label>
+                </div>
+
+                <button type="submit">Update Analysis</button>
+            </form>
+        </section>
+
+        <section id="stats" class="stats">
+            <p>Loading data...</p>
+        </section>
+
+        <section id="char-list-container" style="display:none;">
+            <h2 id="table-title">Unique Lexical Items by Pinyin Reading</h2>
+            <input type="text" id="search" placeholder="Search by character, pinyin, or rank..." autocomplete="off">
 
             <table id="char-table">
                 <thead>
                     <tr>
-                        <th>Rank</th>
-                        <th>Character</th>
-                        <th>Pinyin</th>
-                        <th>Unique Pinyin?</th>
+                        <th>Frequency Rank</th>
+                        <th>Lexical Item</th>
+                        <th>Pinyin (Number)</th>
+                        <th>Unique Reading</th>
                     </tr>
                 </thead>
                 <tbody id="char-tbody"></tbody>
             </table>
-        </div>
+        </section>
+
+        <footer>
+            <h3>Acknowledgments</h3>
+            <p>Dictionary data from <strong>CC-CEDICT</strong> (community-maintained Chinese–English dictionary, latest
+                release December 2025), licensed under CC BY-SA 4.0.<br>
+                Word frequencies from <strong>SUBTLEX-CH</strong> (Cai, Q., & Brysbaert, M., 2010), based on a 33.5
+                million-word corpus of film and television subtitles, released under CC-BY 4.0.</p>
+        </footer>
     </div>
 
     <script src="dictionary2.js"></script>
     <script src="frequency_list.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
