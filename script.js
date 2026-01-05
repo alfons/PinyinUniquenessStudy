@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Total ${lengthText} words analyzed:</strong><br>
                 <small>(Only those present in both frequency list and dictionary)</small><br>
                 <strong style="font-size:1.8em;color:#2c3e50;">${totalWords.toLocaleString()}</strong></p>
-                <strong>Proportion with unique pinyin reading<br></strong>
+                <strong>Proportion with unique Pinyin spelling<br></strong>
                 <small>(During the comparison all spaces and hyphens are removed; ${config.CASE_SENSITIVE_MATCH ? 'case-sensitive' : 'case-insensitive'}):</small><br>
                 <strong style="font-size:1.8em;color:#2c3e50;">
                     ${uniquePinyinCount.toLocaleString()} (${uniquePercentage}%)
