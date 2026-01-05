@@ -1,6 +1,6 @@
 **Bottom line:** Single syllable Pinyin words are highly homophonous, while compound words written in Pinyin are almost as unique as the Chinese characters themselves.
 
-![Pinyin Uniqueness Chart](https://github.com/user-attachments/assets/c87455aa-b07f-4a57-9616-8d9305b32cd6)
+![Pinyin Uniqueness Chart](pinyin%20uniqueness.jpg)
 
 ## Key Insights
 
