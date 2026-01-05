@@ -4,13 +4,13 @@
 
 ## Key Insights
 
-- Among the **3,000 most frequent single characters**, **22.0%** have a unique spelling in Pinyin.  
+- Among the 3,000 most frequent single characters, 22.0% have a unique spelling in Pinyin.
 
-- Among **all 4,681 single character words in the dictionary**, only **12.9%** have unique Pinyin spelling.
+- Among all 4,681 single-character words in the dictionary, only 12.9% have unique Pinyin spelling.
 
-- In contrast, the **5,000 most frequent two-character words** achieve an astonishing **97.8%** uniqueness in Pinyin spelling.
+- In contrast, the 3,000 most frequent two-character words achieve an astonishing 98.5% uniqueness in Pinyin spelling.
 
-- Even when expanding to **all ~29,000 two-character words** in the dictionary, **90.1%** still have unique Pinyin spelling.
+- Even when expanding to all ~29,000 two-character words in the dictionary, 90.1% still have unique Pinyin spelling.
 
 ## Discussion
 
