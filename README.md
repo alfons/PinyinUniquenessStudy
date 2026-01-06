@@ -11,11 +11,11 @@ Version 2 — 2026-Jan-06
 
 Despite heavy homophony in monosyllables, Pinyin functions with near character-level precision for polysyllabic words.
 
-- Among the **top 800 monosyllables**, uniqueness is only **53.1%**
-- Among the **top 3,000 monosyllables**, uniqueness drops to **13.2%**
-- By contrast, **two-syllable words** are **98.4% unique** in the top **3,000**
-- Even at **10,000 two-syllable words**, uniqueness remains **95.6%**
+- **Two-syllable words** are **98.4% unique** among the top **3,000**
+- Even among the top **10,000 two-syllable words**, uniqueness remains **95.6%**
 - For **three-syllable words**, uniqueness is effectively complete (**99.2%**)
+- By contrast, among the **top 800 monosyllables**, only **53.1%** are unique
+- Among the **top 3,000 monosyllables**, uniqueness drops to **13.2%**
 
 In practical usage, ambiguity is rare, easily resolved by context, and largely confined to a small set of highly polysemous monosyllables.
 
