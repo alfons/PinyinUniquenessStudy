@@ -3,7 +3,7 @@
 **Quantitative Evidence Supporting the Near-Equivalence of Pinyin and Hanzi for Polysyllabic Vocabulary**
 
 © Alfons Grabher  
-Version 2 — 2026-Jan-06
+Version 2.1 — 2026-Jan-06
 
 ---
 
