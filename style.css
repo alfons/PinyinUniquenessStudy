@@ -1,3 +1,7 @@
+/* =========================
+   Base / Desktop Styles
+   ========================= */
+
 body {
     font-family: Georgia, "Times New Roman", serif;
     background: #f9f5f0;
@@ -36,6 +40,13 @@ h1 {
     margin: 10px 0 0;
 }
 
+.author {
+    text-align: center;
+    font-size: 20px;
+    margin: 15px 0 0;
+    color: #333;
+}
+
 h2 {
     font-size: 22px;
     color: #1a1a1a;
@@ -43,6 +54,102 @@ h2 {
     padding-bottom: 8px;
     margin-top: 40px;
 }
+
+ul {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/* =========================
+   Abstract / Figures
+   ========================= */
+
+.abstract {
+    margin-bottom: 50px;
+    padding: 25px;
+    background: #f8f8f8;
+    border-left: 5px solid #5c8a8a;
+}
+
+figure {
+    margin: 0;
+    overflow-x: auto;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* =========================
+   Tables (Global)
+   ========================= */
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background-color: #eaeaea;
+    font-weight: bold;
+    color: #333;
+    position: sticky;
+    top: 0;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* =========================
+   Summary Data Table
+   ========================= */
+
+.data-summary-table {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 30px 0;
+}
+
+.data-summary-table th {
+    padding: 6px;
+    border-bottom: 2px solid #333;
+}
+
+.data-summary-table td {
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+}
+
+.data-summary-table td:nth-child(5) {
+    font-weight: bold;
+}
+
+/* =========================
+   Controls / Form
+   ========================= */
 
 #controls {
     background: #f0f0f0;
@@ -61,13 +168,8 @@ h2 {
     font-weight: bold;
 }
 
-.form-group select,
-.form-group input[type="checkbox"] {
+.form-group select {
     font-size: 16px;
-}
-
-.checkbox label {
-    width: auto;
 }
 
 .note {
@@ -91,6 +193,10 @@ button:hover {
     background: #2c3e50;
 }
 
+/* =========================
+   Stats Block
+   ========================= */
+
 .stats {
     font-size: 17px;
     margin: 30px 0;
@@ -103,29 +209,12 @@ button:hover {
     color: #1a1a1a;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 16px;
-}
+/* =========================
+   Character List Table
+   ========================= */
 
-th, td {
-    padding: 12px 14px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #eaeaea;
-    font-weight: bold;
-    color: #333;
-    position: sticky;
-    top: 0;
-}
-
-tr:hover {
-    background-color: #f5f5f5;
+#char-list-container {
+    overflow-x: auto;
 }
 
 #search {
@@ -138,90 +227,126 @@ tr:hover {
     box-sizing: border-box;
 }
 
-footer {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
+#char-table th {
+    position: relative;
+    user-select: none;
+    transition: background-color 0.2s;
 }
 
-.abstract {
-    margin-bottom: 50px;
-    padding: 25px;
-    background: #f8f8f8;
-    border-left: 5px solid #5c8a8a;
+#char-table th:hover {
+    background-color: #f0f0f0;
 }
 
-.chart img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    margin: 20px 0;
+#char-table th.sort-arrow::after {
+    content: attr(data-sort);
+    font-size: 0.8em;
+    margin-left: 6px;
+    opacity: 0.6;
 }
 
-figcaption {
-    text-align: center;
-    font-style: italic;
-    color: #555;
-    margin-top: 8px;
+#char-table th.asc .sort-arrow::after { content: "↑"; opacity: 1; }
+#char-table th.desc .sort-arrow::after { content: "↓"; opacity: 1; }
+
+#char-table td:nth-child(3) {
+    font-family: monospace;
+    word-break: break-all;
 }
 
-ul {
-    line-height: 1.8;
-    font-size: 17px;
-}
-
-.signature {
-    text-align: right;
-    font-style: italic;
-    margin-top: 30px;
-    font-size: 18px;
-}
-
-.author {
-    text-align: center;
-    font-size: 20px;
-    margin: 15px 0 0;
-    color: #333;
-}
+/* =========================
+   Footer
+   ========================= */
 
 footer {
     margin-top: 80px;
     padding-top: 30px;
     border-top: 2px solid #ccc;
+    text-align: center;
     font-size: 15px;
+    color: #666;
 }
 
-.data-summary-table {
+/* =========================
+   Mobile Overrides
+   ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+    }
+
+    .container {
+        margin: 0;
+        padding: 16px;
+        max-width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+
+    .abstract {
+        padding: 16px;
+    }
+
+    .form-group label {
+        display: block;
+        width: auto;
+        margin-bottom: 6px;
+    }
+
+    .form-group select {
+        width: 100%;
+    }
+
+    #char-table {
+        font-size: 14px;
+    }
+
+    #char-table td:nth-child(2) {
+        font-size: 22px;
+        text-align: center;
+    }
+    /* HARD FORCE table to respect container width */
+#char-table {
+    table-layout: fixed;
     width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
-    font-size: 16px;
-    font-family: Arial;
-    background-color: white;
+    min-width: 0;
 }
 
-.data-summary-table th {
-    font-weight: bold;
-    text-align: left;
-    padding: 6px;
-    border-bottom: 2px solid #333;
+/* Allow headers to wrap */
+#char-table th {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
-.data-summary-table td {
-    padding: 6px;
-    border-bottom: 1px solid #ddd;
+/* Force pinyin to break */
+#char-table td:nth-child(3) {
+    white-space: normal;
+    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 
-.data-summary-table td:nth-child(3),
-.data-summary-table td:nth-child(4),
-.data-summary-table td:nth-child(5) {
-    text-align: left;
+/* Contain horizontal overflow */
+#char-list-container {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-.data-summary-table td:nth-child(5) {
-    text-align: left;
-    font-weight: bold;
 }
