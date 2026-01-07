@@ -14,16 +14,12 @@
             <h1>Empirical Analysis of Pinyin Uniqueness in Mandarin Chinese Lexical Items</h1>
             <p class="subtitle">Quantitative Evidence Supporting the Near-Equivalence of Pinyin and Hanzi
                 for Polysyllabic Vocabulary</p>
-            <p class="subtitle">Version 2.3 (2026-Jan-07)</p>
+            <p class="subtitle">Version 2.5 (2026-Jan-07)</p>
             <p class="author">&copy; Alfons Grabher</p>
         </header>
 
         <section class="abstract">
-            <p><strong>Summary:</strong> Despite heavy homophony in monosyllables (only 53.1% unique in the top 800,
-                falling to 13.2% in the top 3,000), Pinyin works with near-character-level precision for polysyllabic
-                words. Two-syllable forms are 98.4% unique in the top 3,000 most frequent, and 95.6% unique within the
-                top 10,000 most frequent words, which is already well beyond everyday usage. In practice, ambiguity is
-                rare, context-resolvable, and largely limited to a small set of highly polysemous monosyllables.</p>
+            <p><strong>Summary:</strong> Despite heavy homophony in monosyllables (only 53.1% unique among the top 800 one-syllable words, falling to 13.2% in the top 3,000), Pinyin functions with near character-level precision for polysyllabic words. Two-syllable words are 98.4% unique in the top 3,000 most frequent items of that length, and 95.6% unique within the top 10,000, a range already extending well beyond everyday usage. In practice, ambiguity is rare, readily resolved by context, and largely confined to a small set of highly polysemous monosyllables.</p>
 
             <figure class="chart">
                 <table class="data-summary-table">
@@ -129,7 +125,8 @@
             <p>
                 Therefore, homophony mainly affects extremely versatile monosyllabic words such as <em>shì</em>,
                 <em>jí</em>, or <em>yì</em>; but even these are, in practice, easy to interpret from context.
-                The following examples illustrate that, in modern Mandarin, even in the case of highly polysemous monosyllabic items, Pinyin spelling achieves effective disambiguation through context.
+                The following examples illustrate that, in modern Mandarin, even in the case of highly polysemous
+                monosyllabic items, Pinyin spelling achieves effective disambiguation through context.
             </p>
 
             <p>
@@ -184,13 +181,19 @@
                 spaces and hyphens from the dictionary Pinyin entries.</p>
             <form id="config-form">
                 <div class="form-group">
-                    <label for="word-length">Word Length (characters):</label>
+                    <label for="word-length">Word Length:</label>
                     <select id="word-length" name="word-length">
                         <option value="1">1 (single character)</option>
                         <option value="2" selected>2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
+                    <span class="note">
+                        <ul style="margin: 4px 0 0 0; padding-left: 18px; font-size: 0.9em;">
+                            <li>Word length is defined as the number of Chinese characters in a lexical item, equivalently the number of syllables in its Pinyin transcription.
+                            </li>
+                        </ul>
+                    </span>
                 </div>
 
                 <div class="form-group">
@@ -205,6 +208,13 @@
                         <option value="25000">Top 25,000</option>
                         <option value="false">All available entries</option>
                     </select>
+                    <span class="note">
+                        <ul style="margin: 4px 0 0 0; padding-left: 18px; font-size: 0.9em;">
+                            <li>Frequency thresholds are applied within word-length strata, not globally.
+That is, each syllable-length class is ranked by frequency independently, and cutoffs (e.g. top 3,000) refer to the most frequent items within that class, not to the most frequent words regardless of length.</li>
+                        </ul>
+                    </span>
+
                 </div>
 
                 <div class="form-group">
