@@ -238,10 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            const cutoffText = cutoffDisplay !== 'all'
+                ? ` (out of top ${cutoffDisplay} by frequency)`
+                : '';
+
             statsDiv.innerHTML = `
                 <h2>Results</h2>
                 <p>Uniqueness Mode: ${getModeName(config.UNIQUENESS_MODE)}</p>
-                <p><strong>Total ${lengthText} words analyzed:</strong><br>
+                <p><strong>Total ${lengthText} words analyzed${cutoffText}:</strong><br>
                 <strong style="font-size:1.8em;color:#2c3e50;">${totalWords.toLocaleString()}</strong></p>
                 <strong>Unique items<br>
                 <strong style="font-size:1.8em;color:#2c3e50;">
