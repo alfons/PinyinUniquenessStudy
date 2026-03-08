@@ -1,6 +1,6 @@
-# Empirical Analysis of Pinyin Uniqueness in Mandarin Chinese Lexical Items
+# Empirical Analysis of Toned Pinyin Uniqueness in Mandarin Chinese Lexical Items
 
-### **Quantitative Evidence Supporting the Near-Equivalence of Pinyin and Hanzi for Polysyllabic Vocabulary**
+### **Quantitative Evidence Supporting the Near-Equivalence of Toned Pinyin and Hanzi for Polysyllabic Vocabulary**
 
 by Alfons Grabher
 
@@ -8,7 +8,7 @@ by Alfons Grabher
 
 ## Summary
 
-Despite heavy homophony in monosyllables, Pinyin functions with near character-level precision for polysyllabic words.
+Despite heavy homophony in monosyllables, toned pinyin functions with near character-level precision for polysyllabic words.
 
 - **Two-syllable words** are **98.4% unique** among the top **3,000** most frequent items of that length  
 - Even among the top **10,000 two-syllable words**, uniqueness remains high at **95.6%**  
@@ -20,9 +20,9 @@ In practical language use, ambiguity is rare, readily resolved by context, and l
 
 ---
 
-## Proportion of Unique Pinyin Spellings
+## Proportion of Unique Toned Pinyin Spellings
 
-| Word Length | Cutoff Setting              | Words Analyzed | Unique Pinyin | Percentage |
+| Word Length | Cutoff Setting              | Words Analyzed | Unique Toned Pinyin | Percentage |
 |------------:|:----------------------------|---------------:|--------------:|-----------:|
 | 1           | Top 800 most frequent       | 800            | 425           | 53.1%      |
 | 1           | Top 3,000 most frequent     | 3,000          | 396           | 13.2%      |
