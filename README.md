@@ -22,7 +22,7 @@ In practical language use, ambiguity is rare, readily resolved by context, and l
 
 ## Proportion of Unique Hànyǔ Pīnyīn Spellings
 
-| Word Length | Cutoff Setting              | Words Analyzed | Unique Pinyin | Percentage |
+| Word Length | Cutoff Setting              | Words Analyzed | Unique Toned Pinyin | Percentage |
 |------------:|:----------------------------|---------------:|--------------:|-----------:|
 | 1           | Top 800 most frequent       | 800            | 425           | 53.1%      |
 | 1           | Top 3,000 most frequent     | 3,000          | 396           | 13.2%      |
